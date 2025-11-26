@@ -1,0 +1,47 @@
+<div class="contenedor">
+
+    <div class="contenedor-logo">
+        <img src="logo.png" alt="error :c" class="contenedor-logo-img">
+        <div *ngIf="!mensaje">Recuperar contraseña</div>
+        <ng-container *ngTemplateOutlet="pasos"></ng-container>
+    </div>
+
+</div>
+<!-- templates -->
+<ng-template #pasos>
+    <form [formGroup]="datosRecuperar" (ngSubmit)="siguientePaso()" class="contenedor-form">
+        <!-- paso 1 -->
+        <div *ngIf="paso1">
+            <p class="instruccion">Ingrese el correo electronico ligado a su cuenta Dianet</p>
+            <label for="campoCorreoElectronico">Correo electronico:</label>
+            <input type="text" id="campoCorreoElectronico" name="CorreoElectronico" placeholder="Correo electronico"
+                formControlName="correoElectronico">
+
+            <div class="formatoError" *ngIf="paso1">{{errorCorreoElectronico}}</div>
+            <button type="button" class="butonContinuar" (click)="pasoUno()" *ngIf="paso1">Continuar</button>
+        </div>
+
+        <!-- paso 2 -->
+        <div *ngIf="paso2">
+            <p>Por favor ingrese el codigo que le llego a su correo electronico.</p>
+            <label for="codigo">Codigo:</label>
+            <input type="text" id="codigo" placeholder="Ingresar Codigo" formControlName="codigo" maxlength="7">
+        </div>
+        <div class="formatoError" *ngIf="paso2">{{errorCodigo}}</div>
+        <button type="button" class="botonContiuar" (click)="pasoDos()" *ngIf="paso2">Continuar</button>
+        <!-- paso 3 -->
+        <div *ngIf="paso3">
+            <p class="orden">Ingrese su nueva contraseña.</p>
+            <label for="campoContrasena">contraseña</label>
+            <input type="password" id="campoContrasena" placeholder="contraseña" formControlName="contrasena">
+        </div>
+        <div class="formatoError" *ngIf="paso3">{{errorContrasena}}</div>
+
+        <div *ngIf="paso3">
+            <label for="campoConfirmarContrasena">Confirmar contraseña:</label>
+            <input type="password" id="campoConfirmarContrasena" formControlName="confirmarContrasena">
+        </div>
+        <div class="formatoError" *ngIf="paso3">{{errorConfirmarContrasena}}</div>
+        <button type="submit" *ngIf="paso3">Confirmar</button>
+    </form>
+</ng-template>
