@@ -1,0 +1,147 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenedor-form-titulo {
+    font-size: 65px;
+    margin: 9px;
+}
+
+.contenedor-form-texto {
+    font-weight: lighter;
+    font-size: 26px;
+    margin: 0px;
+}
+
+.formulario-campos {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+}
+
+.contenedor-form-input {
+    border-radius: 2.5px;
+    border-width: inherit;
+    box-shadow: 0px 0px 1px #1a1a1a;
+    padding: 12px;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+}
+
+.contenedor-form-input:hover {
+    background: #fafafa;
+    box-shadow: 0px 0px 2px #1a1a1a;
+}
+
+/* contenedor general */
+.contenedor-form-checkbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.contenedor-form-checkbox:hover {
+    color: #000000;
+}
+
+/* checkbox nativo */
+.contenedor-form-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* círculo */
+.contenedor-form-checkbox .checkmark {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: all 0.25s ease;
+}
+
+/* hover */
+.contenedor-form-checkbox:hover .checkmark {
+    background-color: #e6f7fb;
+    border-color: #3AA6D0;
+}
+
+/* marcado */
+.contenedor-form-checkbox input:checked~.checkmark {
+    border-color: var(--color-comun-2);
+    background-color: #fff;
+}
+
+/*cCírculo interno */
+.contenedor-form-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar el punto cuando está marcado */
+.contenedor-form-checkbox input:checked~.checkmark::after {
+    display: block;
+}
+
+/* Estilo del punto */
+.contenedor-form-checkbox .checkmark::after {
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--color-comun-2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+}
+
+.contenedor-form-boton1 {
+    border-radius: 2.5px;
+    border-width: inherit;
+    box-shadow: 0px 0px 1px #1a1a1a;
+    padding: 12px;
+    background: var(--color-comun-2);
+    color: white;
+    font-size: large;
+    transition: color 0.2s ease;
+    margin-top: 20px;
+}
+
+.contenedor-form-boton1:hover {
+    background: var(--color-comun-1)
+}
+
+.contenedor-form-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.links {
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.2s ease;
+}
+
+.links:hover {
+    color: var(--color-comun-2);
+}

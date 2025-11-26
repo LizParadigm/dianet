@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-comun-1: #3387a8;
+    /* principal. botones holder, seleccion activa - holder */
+    --color-comun-2: #3AA6D0;
+    /* botones intactos, seleccion holder */
+    --color-comun-3: #ffffff;
+    /* fondo */
+    --color-comun-4: #0d47a1;
+    /* iconos */
+    --color-comun-5: #a7e3c9;
+    /* algo bien */
+    --color-comun-6: #f32165;
+    /* algo mal */
+    --font-family-1: 'Roboto', sans-serif;
+    --font-family-2: 'Open Sans', sans-serif;
+    --font-family-3: 'Lato', sans-serif;
+    --font-family-4: 'Nunito Sans', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: var(--font-family-3);
+}
+
+/*fuente*/
+.titulo {
+    font-weight: 600;
+}
+
+.subtitulo {
+    font-weight: 600;
+}
+
+.formatoError {
+    color: var(--color-comun-6);
+    font-size: x-small;
+}
+
+.bordeError {
+    border: 1px solid var(--color-comun-6);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.limpiarButton {
+    isplay: flex;
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
