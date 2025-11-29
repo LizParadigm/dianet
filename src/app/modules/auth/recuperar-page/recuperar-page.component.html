@@ -1,47 +1,67 @@
-<div class="contenedor">
+<span class="control">
+    <div class="contenedor">
 
-    <div class="contenedor-logo">
-        <img src="logo.png" alt="error :c" class="contenedor-logo-img">
-        <div *ngIf="!mensaje">Recuperar contraseña</div>
-        <ng-container *ngTemplateOutlet="pasos"></ng-container>
+        <div class="contenedor-logo">
+            <img src="logo.png" alt="error :c" class="contenedor-logo-img">
+        </div>
+        <div class="contenedor-texto">
+            <h1 class="contenedor-form-titulo" *ngIf="!mensaje">Recuperar contraseña</h1>
+            <ng-container *ngTemplateOutlet="pasos" class="formulario-campos"></ng-container>
+        </div>
+
     </div>
+</span>
 
-</div>
+
+
+
+
+
 <!-- templates -->
 <ng-template #pasos>
     <form [formGroup]="datosRecuperar" (ngSubmit)="siguientePaso()" class="contenedor-form">
-        <!-- paso 1 -->
-        <div *ngIf="paso1">
-            <p class="instruccion">Ingrese el correo electronico ligado a su cuenta Dianet</p>
-            <label for="campoCorreoElectronico">Correo electronico:</label>
-            <input type="text" id="campoCorreoElectronico" name="CorreoElectronico" placeholder="Correo electronico"
-                formControlName="correoElectronico">
 
-            <div class="formatoError" *ngIf="paso1">{{errorCorreoElectronico}}</div>
-            <button type="button" class="butonContinuar" (click)="pasoUno()" *ngIf="paso1">Continuar</button>
+        <!-- paso 1 -->
+        <p class="instruccion" *ngIf="paso1">Ingrese el correo electronico ligado a su cuenta Dianet</p>
+        <div *ngIf="paso1" class="formulario-campos">
+            <label for="campoCorreoElectronico">Correo electronico <span
+                    class="formatoError">{{errorCorreoElectronico}}</span></label>
+            <input type="text" id="campoCorreoElectronico" name="CorreoElectronico" placeholder="Correo electronico"
+                formControlName="correoElectronico" class="contenedor-form-input">
+
+            <button type="button" class="contenedor-form-boton1" (click)="pasoUno()">Continuar</button>
         </div>
 
         <!-- paso 2 -->
-        <div *ngIf="paso2">
-            <p>Por favor ingrese el codigo que le llego a su correo electronico.</p>
-            <label for="codigo">Codigo:</label>
-            <input type="text" id="codigo" placeholder="Ingresar Codigo" formControlName="codigo" maxlength="7">
-        </div>
-        <div class="formatoError" *ngIf="paso2">{{errorCodigo}}</div>
-        <button type="button" class="botonContiuar" (click)="pasoDos()" *ngIf="paso2">Continuar</button>
-        <!-- paso 3 -->
-        <div *ngIf="paso3">
-            <p class="orden">Ingrese su nueva contraseña.</p>
-            <label for="campoContrasena">contraseña</label>
-            <input type="password" id="campoContrasena" placeholder="contraseña" formControlName="contrasena">
-        </div>
-        <div class="formatoError" *ngIf="paso3">{{errorContrasena}}</div>
+        <p class="instruccion" *ngIf="paso2">Ingrese en el siguiente campo el codigo que se a enviado al correo
+            proporcionado.</p>
+        <div *ngIf="paso2" class="formulario-campos">
+            <label for="codigo">Codigo <span class="formatoError">{{errorCodigo}}</span> </label>
+            <input type="text" id="codigo" placeholder="Ingresar Codigo" formControlName="codigo" maxlength="7"
+                class="contenedor-form-input">
 
-        <div *ngIf="paso3">
-            <label for="campoConfirmarContrasena">Confirmar contraseña:</label>
-            <input type="password" id="campoConfirmarContrasena" formControlName="confirmarContrasena">
+            <button type="button" class="contenedor-form-boton1" (click)="pasoDos()">Continuar</button>
         </div>
-        <div class="formatoError" *ngIf="paso3">{{errorConfirmarContrasena}}</div>
-        <button type="submit" *ngIf="paso3">Confirmar</button>
+
+        <!-- paso 3 -->
+        <p class="instruccion" *ngIf="paso3">Ingrese su nueva contraseña en el siguiente campo y vuelva a hacerlo en el
+            segundo campo.</p>
+        <div *ngIf="paso3" class="formulario-campos">
+            <label for="campoContrasena">contraseña <span class="formatoError">{{errorContrasena}}</span></label>
+            <input type="password" id="campoContrasena" placeholder="Ingresar contraseña nueva"
+                formControlName="contrasena" class="contenedor-form-input">
+
+            <label for="campoConfirmarContrasena">Confirmar contraseña <span
+                    class="formatoError">{{errorConfirmarContrasena}}</span></label>
+            <input type="password" id="campoConfirmarContrasena" placeholder="Ingresar contraseña nueva"
+                formControlName="confirmarContrasena" class="contenedor-form-input">
+
+            <button type="submit" *ngIf="paso3" class="contenedor-form-boton1">Confirmar</button>
+        </div>
     </form>
 </ng-template>
+
+<!-- mensaje final -->
+<div class="mensajeFin" *ngIf="mensaje">
+    <div class="mensaje">Contraseña cambiada.</div>
+</div>

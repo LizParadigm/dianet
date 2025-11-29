@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MensajeErrorService {
-  registrarNombre(required: boolean, pattern1: boolean, minlength: boolean) {
-    if (required) {
+  registrarNombre(nombre: AbstractControl | null): string {
+    if (!nombre) return '';
+
+
+    if (nombre.hasError('required')) {
       return 'Campo necesario.';
     }
-    else if (pattern1) {
-      return 'solo se permiten letras.';
+    else if (nombre.hasError('pattern')) {
+      return 'Solo se permiten letras.';
     }
-    else if (minlength) {
-      return 'Debe tener mas de 3 letras.'
+    else if (nombre.hasError('minlength')) {
+      return 'Debe tener mas de 3 letras.';
     }
     else {
       return '';
@@ -101,8 +105,10 @@ export class MensajeErrorService {
     }
   }
 
-  ingresarContrasena(required: boolean) {
-    if (required) {
+  iniciarContrasena(contrasena: AbstractControl | null): string {
+    if (!contrasena) return '';
+
+    if (contrasena.hasError('required')) {
       return 'Campo necesario.';
     }
     else {

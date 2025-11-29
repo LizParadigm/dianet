@@ -1,33 +1,41 @@
-<div class="contenedor">
+<span class="control">
+    <div class="contenedor">
 
-    <div class="contenedor-logo">
-        <img src="logo.png" alt="error :c" class="contenedor-logo-img">
+        <div class="contenedor-logo">
+            <img src="logo.png" alt="error :c" class="contenedor-logo-img">
+        </div>
+
+        <div class="contenedor-texto">
+            <h1 class="contenedor-form-titulo titulo">Inicio de sesión</h1>
+
+            <form [formGroup]="formulario" (ngSubmit)="entrar()" class="contenedor-form">
+                <p class="contenedor-form-texto">Acceda a su cuenta para continuar</p>
+
+                <div class="formulario-campos">
+                    <label class="subtitulos">Usuario <span class="formatoError">{{errorUsername}}</span></label>
+                    <input type="text" id="inputUsername" formControlName="username"
+                        [ngClass]="{'errorBorde':errorUsername}" class="contenedor-form-input"
+                        placeholder="Ingrese su usuario">
+
+                    <label class="subtitulos">Contraseña <span class="formatoError">{{errorContrasena}}</span></label>
+                    <input type="password" id="inputContrasena" formControlName="contrasena"
+                        class="contenedor-form-input" [ngClass]="{'errorBorde': errorContrasena}"
+                        placeholder="Ingrese su contraseña">
+
+                    <label class="contenedor-form-checkbox" for="recordar">
+                        <input type="checkbox" formControlName="recordar" id="recordar">
+                        <span class="checkmark"></span>
+                        Recuerdame
+                    </label>
+                    <button type="submit" class="contenedor-form-boton1">Acceder</button>
+                </div>
+
+                <div class="contenedor-form-links">
+                    <a routerLink="/recuperar-cuenta" class="links">¿Olvidaste tu contraseña?</a>
+                    <a routerLink="/registrar" class="links">Registrarme</a>
+                </div>
+            </form>
+        </div>
+
     </div>
-
-    <form [formGroup]="formulario" (ngSubmit)="entrar()" class="contenedor-form">
-        <h1 class="contenedor-form-titulo titulo">Inicio de sesión</h1>
-        <p class="contenedor-form-texto">Acceda a su cuenta para continuar</p>
-
-        <div class="formulario-campos">
-            <label class="subtitulos">Usuario</label>
-            <input type="text" id="inputUsername" formControlName="username" [ngClass]="{'errorBorde':errorUsername}"
-                class="contenedor-form-input" placeholder="Ingrese su usuario">
-
-            <label class="subtitulos">Contraseña</label>
-            <input type="password" id="inputContrasena" formControlName="contrasena" class="contenedor-form-input"
-                [ngClass]="{'errorBorde': errorContrasena}" placeholder="Ingrese su contraseña">
-
-            <label class="contenedor-form-checkbox" for="recordar">
-                <input type="checkbox" formControlName="recordar" id="recordar">
-                <span class="checkmark"></span>
-                Recuerdame
-            </label>
-            <button type="submit" class="contenedor-form-boton1">Acceder</button>
-        </div>
-
-        <div class="contenedor-form-links">
-            <a routerLink="/recuperar-cuenta" class="links">¿Olvidaste tu contraseña?</a>
-            <a routerLink="/registrar" class="links">Registrarme</a>
-        </div>
-    </form>
-</div>
+</span>

@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import { MensajeErrorService } from '../../../shared/services/mensajeError/mensaje-error.service';
+import { RutService } from '../../../shared/services/rut/rut.service';
 
 @Component({
   selector: 'app-auth-page',
@@ -25,7 +27,9 @@ export class AuthPageComponent implements OnInit {
 
   //servicios
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private errores: MensajeErrorService,
+    private route: RutService
   ) { }
 
   ngOnInit(): void {
@@ -45,12 +49,13 @@ export class AuthPageComponent implements OnInit {
     this.mensajesError() //verificamos errores
 
     if (this.formulario.valid) {
-      //se supondria que se manda al back, se obtiene un token de acceso y cosas funcionales.
+      this.route.home();
     }
   }
 
   mensajesError() {
-    //crear servicio que muestra los mensajes de error
+    this.errorUsername = this.errores.registrarNombre(this.formulario.get('username'));
+    this.errorContrasena = this.errores.iniciarContrasena(this.formulario.get('contrasena'));
   }
 
 }

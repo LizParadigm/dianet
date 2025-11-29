@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Router } from "@angular/router";
 import { MensajeErrorService } from '../../../shared/services/mensajeError/mensaje-error.service';
 import { CommonModule } from '@angular/common';
+import { RutService } from '../../../shared/services/rut/rut.service';
 
 @Component({
   selector: 'app-recuperar-page',
@@ -27,7 +28,7 @@ export class RecuperarPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router,
+    private route: RutService,
     private mensajeerror: MensajeErrorService
   ) { }
   ngOnInit(): void {
@@ -126,11 +127,9 @@ export class RecuperarPageComponent implements OnInit {
   }
 
   recuperar() {
-    sessionStorage.setItem('correo', this.datosRecuperar.get('correoElectronico')?.value);
-    sessionStorage.setItem('contraseña', this.datosRecuperar.get('contrasena')?.value);
-    sessionStorage.setItem('tema', 'oscuro');
+
     setTimeout(() => {
-      this.router.navigateByUrl('/home');
+      this.route.home();
     }, 3000);
 
   }
