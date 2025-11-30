@@ -160,7 +160,7 @@
     width: 100%;
 }
 
-.links {
+/* .links {
     text-decoration: none;
     color: #1a1a1a;
     transition: color 0.2s ease;
@@ -168,4 +168,4 @@
 
 .links:hover {
     color: var(--color-comun-2);
-}
+} */

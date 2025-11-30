@@ -1,1 +1,14 @@
-<p>header works!</p>
+<nav class="header" *ngIf="mostrarHeader">
+    <div class="header-logo">
+        <img src="logo.png" alt="error :c" class="img-logo">
+        <label for="header-logo" class="dianet">Dianet</label>
+    </div>
+    <ul class="header-links">
+        <a routerLink="{{inicio}}" class="links">Inicio</a>
+        <a routerLink="/historial" class="links" *ngIf="version">Historial de consultas</a>
+        <a routerLink="/" class="links" *ngIf="!version">Iniciar sesion</a>
+        <li class="header-links-perfil">
+            <img src="" alt="X" class="img-perfil">
+        </li>
+    </ul>
+</nav>
