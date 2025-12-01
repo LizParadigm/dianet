@@ -1,9 +1,20 @@
+.contenedor {
+    display: flex;
+    margin: 10px;
+}
+
 .grafica {
     display: flex;
     gap: 25px;
     padding: 20px;
     height: 260px;
     border: 1px solid #ddd;
+    width: 70%;
+}
+
+.barras {
+    display: #123112;
+    background: #4a90e2;
 }
 
 .barra {
@@ -41,4 +52,33 @@
     text-align: center;
     width: 100%;
     white-space: nowrap;
+}
+
+.boton-consulta {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.boton1 {
+    margin: 0px;
+    padding: 25px;
+    border-radius: 43px;
+}
+
+.resumen {
+    display: s;
+    background: #4674;
+}
+
+.resumen-titulo {
+    display: e;
+    background: #129211;
+}
+
+.resumen-parrafo {
+    display: s;
+    background: #1292;
 }
