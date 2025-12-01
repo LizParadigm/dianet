@@ -42,22 +42,6 @@
     flex-direction: column;
 }
 
-.contenedor-form-boton1 {
-    border-radius: 2.5px;
-    border-width: inherit;
-    box-shadow: 0px 0px 1px #1a1a1a;
-    padding: 12px;
-    background: var(--color-comun-2);
-    color: white;
-    font-size: large;
-    transition: color 0.2s ease;
-    margin-top: 20px;
-}
-
-.contenedor-form-boton1:hover {
-    background: var(--color-comun-1)
-}
-
 .contenedor-form-input {
     border-radius: 2.5px;
     border-width: inherit;
