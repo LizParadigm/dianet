@@ -1,24 +1,32 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  // <-- IMPORTANTE
 
 @Component({
   standalone: true,
   selector: 'app-consulta-page',
   templateUrl: './consulta-page.component.html',
   styleUrls: ['./consulta-page.component.css'],
-  imports: [FormsModule]
+  imports: [
+    FormsModule,
+    CommonModule     // <-- NECESARIO PARA *ngIf
+  ]
 })
 export class ConsultaPageComponent {
 
-  mostrarPreguntas = false;
+  mostrarPreguntas: boolean = false;
+
+  onResponder() {
+    this.mostrarPreguntas = true;
+  }
 
   dieta = {
     equilibrada: false,
     saludable: false
   };
 
-  onResponder() {
-    this.mostrarPreguntas = true;
+  siguiente() {
+    console.log("Dieta:", this.dieta);
   }
 
   onSubmit(form: any) {

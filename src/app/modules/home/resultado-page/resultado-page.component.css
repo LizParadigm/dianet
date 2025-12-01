@@ -1,0 +1,110 @@
+.result-container {
+  padding: 40px 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------------- HEADER ---------------- */
+.header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header p {
+  margin-top: 4px;
+  color: #666;
+}
+
+/* ---------------- INDICADOR DE RIESGO ---------------- */
+.risk-box {
+  margin-top: 25px;
+}
+
+.risk-badge {
+  background: #ff6b6b;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.percent {
+  font-size: 64px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* ---------------- CONTENIDO PRINCIPAL ---------------- */
+.content-sections {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.left,
+.right {
+  width: 50%;
+}
+
+/* ---------------- BARRAS DE RIESGO ---------------- */
+.bar-group span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.bar {
+  background: #e1ecf7;
+  width: 100%;
+  height: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.bar div {
+  background: #2aa7ff;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* ---------------- RECOMENDACIONES ---------------- */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+.card h4 {
+  margin-bottom: 6px;
+}
+
+/* ---------------- BOTONES ---------------- */
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-back,
+.btn-download {
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-back {
+  background: #e5e7eb;
+}
+
+.btn-download {
+  background: #2aa7ff;
+  color: white;
+}
+
+.btn-download:hover {
+  background: #0284c7;
+}
