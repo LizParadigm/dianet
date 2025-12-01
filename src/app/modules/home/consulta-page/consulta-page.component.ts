@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-consulta-page',
   templateUrl: './consulta-page.component.html',
   styleUrls: ['./consulta-page.component.css'],
-  imports: [FormsModulezz]
+  imports: [FormsModule, CommonModule]
 })
 export class ConsultaPageComponent {
 

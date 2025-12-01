@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "fechaConsulta": "2025-12-01",
+        "probabilidadDesarrollo": 28,
+        "resumen": "Se observa un riesgo bajo. Mantener caminatas frecuentes y una dieta equilibrada ayudará a conservar buenos niveles metabólicos y reducir la probabilidad de complicaciones."
+    },
+    {
+        "id": 2,
+        "fechaConsulta": "2025-11-20",
+        "probabilidadDesarrollo": 57,
+        "resumen": "El riesgo es moderado. Prioriza reducir alimentos procesados, aumenta el consumo de verduras y procura establecer rutinas para disminuir el estrés diario."
+    },
+    {
+        "id": 3,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 73,
+        "resumen": "El riesgo es elevado. Se recomienda incorporar ejercicio regular, limitar carbohidratos simples y mejorar la calidad del descanso para estabilizar tus niveles de glucosa."
+    }
+]

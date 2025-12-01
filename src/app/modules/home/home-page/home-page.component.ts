@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../../shared/component/header/header/header.component";
 import { RouterOutlet } from '@angular/router';
-import { ConsultaPageComponent } from '../consulta-page/consulta-page.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, ConsultaPageComponent],
+  imports: [HeaderComponent, RouterOutlet],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
+
+  ngOnInit(): void {
+  }
 
 }
