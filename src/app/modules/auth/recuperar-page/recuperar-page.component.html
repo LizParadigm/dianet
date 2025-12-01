@@ -27,9 +27,9 @@
             <label for="campoCorreoElectronico">Correo electronico <span
                     class="formatoError">{{errorCorreoElectronico}}</span></label>
             <input type="text" id="campoCorreoElectronico" name="CorreoElectronico" placeholder="Correo electronico"
-                formControlName="correoElectronico" class="contenedor-form-input">
+                formControlName="correoElectronico" class="inputs">
 
-            <button type="button" class="contenedor-form-boton1" (click)="pasoUno()">Continuar</button>
+            <button type="button" class="boton1" (click)="pasoUno()">Continuar</button>
         </div>
 
         <!-- paso 2 -->
@@ -38,9 +38,9 @@
         <div *ngIf="paso2" class="formulario-campos">
             <label for="codigo">Codigo <span class="formatoError">{{errorCodigo}}</span> </label>
             <input type="text" id="codigo" placeholder="Ingresar Codigo" formControlName="codigo" maxlength="7"
-                class="contenedor-form-input">
+                class="inputs">
 
-            <button type="button" class="contenedor-form-boton1" (click)="pasoDos()">Continuar</button>
+            <button type="button" class="boton1" (click)="pasoDos()">Continuar</button>
         </div>
 
         <!-- paso 3 -->
@@ -49,14 +49,14 @@
         <div *ngIf="paso3" class="formulario-campos">
             <label for="campoContrasena">contraseña <span class="formatoError">{{errorContrasena}}</span></label>
             <input type="password" id="campoContrasena" placeholder="Ingresar contraseña nueva"
-                formControlName="contrasena" class="contenedor-form-input">
+                formControlName="contrasena" class="inputs">
 
             <label for="campoConfirmarContrasena">Confirmar contraseña <span
                     class="formatoError">{{errorConfirmarContrasena}}</span></label>
             <input type="password" id="campoConfirmarContrasena" placeholder="Ingresar contraseña nueva"
-                formControlName="confirmarContrasena" class="contenedor-form-input">
+                formControlName="confirmarContrasena" class="inputs">
 
-            <button type="submit" *ngIf="paso3" class="contenedor-form-boton1">Confirmar</button>
+            <button type="submit" *ngIf="paso3" class="boton1">Confirmar</button>
         </div>
     </form>
 </ng-template>

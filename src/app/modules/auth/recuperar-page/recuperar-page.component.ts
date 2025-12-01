@@ -29,7 +29,7 @@ export class RecuperarPageComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private route: RutService,
-    private mensajeerror: MensajeErrorService
+    private errores: MensajeErrorService
   ) { }
   ngOnInit(): void {
     this.datosRecuperar = this.fb.group({
@@ -64,7 +64,7 @@ export class RecuperarPageComponent implements OnInit {
   //botones:
   siguientePaso(): void {
     if (this.paso2 === true) {
-      this.errorCodigo = this.mensajeerror.ingresarCodigoRecuperacion(
+      this.errorCodigo = this.errores.ingresarCodigoRecuperacion(
         this.datosRecuperar.get('codigo')?.hasError('required') ?? false,
         this.datosRecuperar.get('minLenght')?.hasError('minLenght') ?? false,
         this.verificarCodigo()
@@ -75,12 +75,9 @@ export class RecuperarPageComponent implements OnInit {
       }
     }
     else if (this.paso3 === true) {
-      this.errorContrasena = this.mensajeerror.registrarContrasena(
-        (this.datosRecuperar.get('contrasena')?.hasError('required') ?? false),
-        (this.datosRecuperar.get('contrasena')?.hasError('minlength') ?? false)
-      )
+      this.errorContrasena = this.errores.registrarContrasena(this.datosRecuperar.get('contrasena'));
 
-      this.errorConfirmarContrasena = this.mensajeerror.registrarConfirmarContrasena(
+      this.errorConfirmarContrasena = this.errores.registrarConfirmarContrasena(
         this.datosRecuperar.get('confirmarContrasena')?.hasError('required') ?? false,
         this.contrasenaConcuerda
       )
@@ -97,7 +94,7 @@ export class RecuperarPageComponent implements OnInit {
 
   };
   pasoUno() {
-    this.errorCorreoElectronico = this.mensajeerror.ingresarCorreo(
+    this.errorCorreoElectronico = this.errores.ingresarCorreo(
       (this.datosRecuperar.get('correoElectronico')?.hasError('required') ?? false),
       (this.datosRecuperar.get('correoElectronico')?.hasError('email') ?? false),
     );
@@ -115,7 +112,7 @@ export class RecuperarPageComponent implements OnInit {
   }
 
   pasoDos() {
-    this.errorCodigo = this.mensajeerror.ingresarCodigoRecuperacion(
+    this.errorCodigo = this.errores.ingresarCodigoRecuperacion(
       this.datosRecuperar.get('codigo')?.hasError('required') ?? false,
       this.datosRecuperar.get('minLenght')?.hasError('minLenght') ?? false,
       this.verificarCodigo()

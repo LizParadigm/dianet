@@ -3,6 +3,8 @@ import { HeaderComponent } from '../../../shared/component/header/header/header.
 import { RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MensajeErrorService } from '../../../shared/services/mensajeError/mensaje-error.service';
+import { RutService } from '../../../shared/services/rut/rut.service';
 
 @Component({
   selector: 'app-registrar',
@@ -14,15 +16,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './registrar.component.css'
 })
 export class RegistrarComponent implements OnInit {
-  errorNombre!: boolean;
-  errorApellidoP!: boolean;
-  errorApellidoM!: boolean;
-  errorCorreo!: boolean;
-  errorContrasena!: boolean;
-  errorRContrasena!: boolean;
+  errorNombre: String = '';
+  errorApellidoP: String = '';
+  errorApellidoM: String = '';
+  errorCorreo: String = '';
+  errorContrasena: String = '';
   formulario!: FormGroup;
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private errores: MensajeErrorService,
+    private rut: RutService
   ) { };
   ngOnInit(): void {
     this.formulario = this.fb.group({
@@ -57,7 +60,18 @@ export class RegistrarComponent implements OnInit {
 
 
   registrar() {
-
+    this.mensajesError();
+    if (this.formulario.valid) {
+      this.rut.home();
+      localStorage.setItem('nuevo', 'true');
+    }
   }
 
+  mensajesError() {
+    this.errorNombre = this.errores.registrarNombre(this.formulario.get('nombre'));
+    this.errorApellidoP = this.errores.registrarApellido(this.formulario.get('apellidoP'));
+    this.errorApellidoM = this.errores.registrarApellido(this.formulario.get('apellidoM'));
+    this.errorCorreo = this.errores.registrarCorreo(this.formulario.get('correo'));
+    this.errorContrasena = this.errores.registrarContrasena(this.formulario.get('contrasena'));
+  }
 }
