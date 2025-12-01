@@ -1,0 +1,65 @@
+<p>resultado-page works!</p>
+<div class="result-container">
+
+  <!-- -------------------- TÍTULO -------------------- -->
+  <div class="header">
+    <h2>Resultados de Análisis de Riesgo</h2>
+    <p>Evaluación completa de tu salud basada en los datos proporcionados.</p>
+  </div>
+
+  <!-- -------------------- INDICADOR DE RIESGO -------------------- -->
+  <div class="risk-box">
+    <span class="risk-badge">Riesgo Alto</span>
+    <h1 class="percent">85%</h1>
+    <p>probabilidad de riesgo identificada.</p>
+  </div>
+
+  <div class="content-sections">
+
+    <!-- -------------------- FACTORES DE RIESGO -------------------- -->
+    <div class="left">
+      <h3>Factores de Riesgo Clave</h3>
+
+      <div class="bar-group">
+        <span>Sedentarismo</span>
+        <div class="bar"><div style="width: 70%"></div></div>
+
+        <span>Edad</span>
+        <div class="bar"><div style="width: 45%"></div></div>
+
+        <span>Ansiedad</span>
+        <div class="bar"><div style="width: 90%"></div></div>
+
+        <span>Alimentación</span>
+        <div class="bar"><div style="width: 65%"></div></div>
+      </div>
+    </div>
+
+    <!-- -------------------- RECOMENDACIONES -------------------- -->
+    <div class="right">
+      <h3>Recomendaciones</h3>
+
+      <div class="card">
+        <h4>Mejora tu Actividad Física</h4>
+        <p>Se recomienda incorporar al menos 30 minutos de ejercicio moderado, caminar o practicar yoga para mejorar tu salud.</p>
+      </div>
+
+      <div class="card">
+        <h4>Revisa tu Dieta</h4>
+        <p>Reduce el consumo de azúcares refinados y grasas saturadas. Integra alimentos frescos y naturales.</p>
+      </div>
+
+      <div class="card">
+        <h4>Manejo del Estrés</h4>
+        <p>Practica técnicas de respiración o meditación para reducir el estrés y mejorar tu bienestar general.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------- BOTONES -------------------- -->
+  <div class="buttons">
+    <button class="btn-back" (click)="regresar()">← Regresar</button>
+    <button class="btn-download" (click)="descargarResultados()">📄 Descargar Resultados</button>
+  </div>
+
+</div>
