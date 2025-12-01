@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  // <-- IMPORTANTE
 
 @Component({
   standalone: true,
@@ -11,15 +12,19 @@ import { FormsModule } from '@angular/forms';
 })
 export class ConsultaPageComponent {
 
-  mostrarPreguntas = false;
+  mostrarPreguntas: boolean = false;
+
+  onResponder() {
+    this.mostrarPreguntas = true;
+  }
 
   dieta = {
     equilibrada: false,
     saludable: false
   };
 
-  onResponder() {
-    this.mostrarPreguntas = true;
+  siguiente() {
+    console.log("Dieta:", this.dieta);
   }
 
   onSubmit(form: any) {
