@@ -48,11 +48,14 @@
 .registrar-titulo {
     display: e;
     background: #e8fff5;
+    margin: 0px;
+    font-size: 30px;
 }
 
 .registrar-instruccion {
     display: e;
     background: #fff8d9;
+    font-weight: lighter;
 }
 
 .inputs {
