@@ -47,7 +47,7 @@ body {
 }
 
 .limpiarButton {
-    isplay: flex;
+    display: flex;
     background: none;
     border: none;
     margin: 0px;
