@@ -34,4 +34,8 @@ export class RutService {
     return version;
   }
 
+  consulta() {
+    this.router.navigateByUrl('/consulta');
+  }
+
 }

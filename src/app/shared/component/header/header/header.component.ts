@@ -30,14 +30,16 @@ export class HeaderComponent implements OnInit {
           case 1:
             this.mostrarHeader = true
             this.version = true;
+            this.inicio = '/home';
             break;
           case 2:
             this.mostrarHeader = true;
-            this.version = false
+            this.version = false;
+            this.inicio = '/registrar';
             break
           case 3:
-            this.mostrarHeader = false
-            break
+            this.mostrarHeader = false;
+            break;
         }
       }
     })

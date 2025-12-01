@@ -1,0 +1,44 @@
+.grafica {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    height: 260px;
+    border: 1px solid #ddd;
+}
+
+.barra {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valor {
+    width: 100%;
+    background: #4a90e2;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    transition: height 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pct {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #333;
+}
+
+.fecha {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}

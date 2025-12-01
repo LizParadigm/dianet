@@ -1,0 +1,17 @@
+<div class="grafica">
+    <div class="barra" *ngFor="let item of datos">
+
+        <div class="valor" [style.height.%]="item.probabilidadDesarrollo">
+            <span class="pct">{{ item.probabilidadDesarrollo }}%</span>
+        </div>
+
+        <span class="fecha">{{ item.fechaConsulta }}</span>
+    </div>
+</div>
+<div class="boton-consulta">
+    <button type="button" class="boton1" (click)="iniciarConsulta()">Comenzar</button>
+</div>
+<div class="resumen" *ngIf="target">
+    <label class="resumen-titulo">Resumen <span>{{ target.fechaConsulta }}</span></label>
+    <p class="resumen-parrafo">{{ target.resumen }}</p>
+</div>

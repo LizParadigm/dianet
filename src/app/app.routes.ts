@@ -14,12 +14,4 @@ export const routes: Routes = [
         component: HomePageComponent,
         loadChildren: () => import('./modules/home/home.routes').then(module => module.HOME_ROUTES)
     },
-    {
-        path: 'consulta',
-        component: ConsultaPageComponent
-    },
-    {
-        path: 'resultado',
-        component: ResultadoPageComponent
-    }
 ];
