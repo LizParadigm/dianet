@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  // <-- IMPORTANTE
@@ -7,10 +8,7 @@ import { CommonModule } from '@angular/common';  // <-- IMPORTANTE
   selector: 'app-consulta-page',
   templateUrl: './consulta-page.component.html',
   styleUrls: ['./consulta-page.component.css'],
-  imports: [
-    FormsModule,
-    CommonModule     // <-- NECESARIO PARA *ngIf
-  ]
+  imports: [FormsModule, CommonModule]
 })
 export class ConsultaPageComponent {
 
