@@ -5,6 +5,17 @@ import { AbstractControl } from '@angular/forms';
   providedIn: 'root'
 })
 export class MensajeErrorService {
+
+  consultaCampo(campo: AbstractControl | null): string {
+    if (!campo) return '';
+
+    if (campo.hasError('requered')) {
+      return 'Campo necesario';
+    }
+    else {
+      return '';
+    }
+  }
   registrarNombre(nombre: AbstractControl | null): string {
     if (!nombre) return '';
 
