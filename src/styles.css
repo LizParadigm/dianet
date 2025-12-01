@@ -50,6 +50,7 @@ body {
 
 /* limpia los botones, a veces lo uso a veces no */
 .limpiarButton {
+    display: flex;
     background: none;
     border: none;
     margin: 0px;

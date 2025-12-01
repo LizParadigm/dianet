@@ -1,0 +1,63 @@
+<div class="consulta-container">
+
+  <!-- IZQUIERDA -->
+  <div class="image-section">
+    <img src="doctor.jpeg" alt="Doctor" class="doctor-img">
+  </div>
+
+  <!-- DERECHA -->
+  <div class="form-section">
+
+    <h2>Ingreso de Datos Médicos</h2>
+    <p class="subtitle">Responda las siguientes preguntas</p>
+
+    <!-- BOTÓN PARA MOSTRAR PREGUNTAS -->
+    <button class="btn-responder" (click)="onResponder()" *ngIf="!mostrarPreguntas">
+      Responder
+    </button>
+
+    <!-- FORMULARIO -->
+    <form *ngIf="mostrarPreguntas" #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+      <!-- DIETA -->
+      <label class="label">¿Llevas una dieta equilibrada o saludable?</label>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="dieta.equilibrada" name="equilibrada">
+          Sí
+        </label>
+
+        <label>
+          <input type="checkbox" [(ngModel)]="dieta.saludable" name="saludable">
+          No
+        </label>
+      </div>
+
+      <!-- EDAD -->
+      <label class="label">Edad</label>
+      <input type="number" name="edad" ngModel placeholder="Ej: 30" class="input">
+
+      <!-- ALTURA -->
+      <label class="label">Altura (cm)</label>
+      <input type="number" name="altura" ngModel placeholder="Ej: 175" class="input">
+
+      <!-- HABITOS -->
+      <label class="label">Hábitos</label>
+      <textarea name="habitos" ngModel class="textarea" placeholder="Hábitos físicos y actividades que generen estrés"></textarea>
+
+      <!-- HISTORIAL -->
+      <label class="label">Historial Médico Relevante</label>
+      <textarea name="historial" ngModel class="textarea" placeholder="Condiciones preexistentes, cirugías, etc."></textarea>
+
+      <!-- SINTOMAS -->
+      <label class="label">Síntomas Actuales</label>
+      <textarea name="sintomas" ngModel class="textarea" placeholder="Describa cualquier síntoma actual."></textarea>
+
+      <!-- BOTÓN FINAL -->
+      <button type="submit" class="btn-next">Siguiente</button>
+
+    </form>
+
+  </div>
+</div>
