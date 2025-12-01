@@ -101,3 +101,8 @@ body {
     background: #fafafa;
     box-shadow: 0px 0px 2px #1a1a1a;
 }
+
+/* pequeña separacion para links dentro de textos */
+.space {
+    margin-left: 5px;
+}

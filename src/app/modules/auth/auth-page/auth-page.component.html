@@ -14,20 +14,18 @@
                 <div class="formulario-campos">
                     <label class="subtitulos">Usuario <span class="formatoError">{{errorUsername}}</span></label>
                     <input type="text" id="inputUsername" formControlName="username"
-                        [ngClass]="{'errorBorde':errorUsername}" class="contenedor-form-input"
-                        placeholder="Ingrese su usuario">
+                        [ngClass]="{'errorBorde':errorUsername}" class="inputs" placeholder="Ingrese su usuario">
 
                     <label class="subtitulos">Contraseña <span class="formatoError">{{errorContrasena}}</span></label>
-                    <input type="password" id="inputContrasena" formControlName="contrasena"
-                        class="contenedor-form-input" [ngClass]="{'errorBorde': errorContrasena}"
-                        placeholder="Ingrese su contraseña">
+                    <input type="password" id="inputContrasena" formControlName="contrasena" class="inputs"
+                        [ngClass]="{'errorBorde': errorContrasena}" placeholder="Ingrese su contraseña">
 
                     <label class="contenedor-form-checkbox" for="recordar">
                         <input type="checkbox" formControlName="recordar" id="recordar">
                         <span class="checkmark"></span>
                         Recuerdame
                     </label>
-                    <button type="submit" class="contenedor-form-boton1">Acceder</button>
+                    <button type="submit" class="boton1">Acceder</button>
                 </div>
 
                 <div class="contenedor-form-links">

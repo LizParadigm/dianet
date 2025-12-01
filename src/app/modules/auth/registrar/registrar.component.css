@@ -1,114 +1,114 @@
 .contenedor-registrar {
     display: flex;
-    background: #8b9ebe;
     padding: 35px 75px;
+    justify-content: space-evenly;
 }
 
 .seccion1 {
-    display: e;
-    background: #eaf3ff;
-    width: 50%;
+    width: 49%;
 
 }
 
 .seccion1-titulo {
-    background: #e7ffe7;
     color: var(--color-comun-2);
     font-size: 48px;
     margin: 0px;
 }
 
 .seccion1-texto {
-    display: e;
-    background: #fff3e6;
     font-size: 19px;
 }
 
 .seccion1-img {
-    display: e;
-    background: #ffe6f2;
     border-radius: 20px;
 }
 
 .seccion1-img-pie {
     display: flex;
-    background: #f2ffe6;
     margin: 30px;
-    /* justify-items: center; */
     justify-content: center;
     font-weight: lighter;
 }
 
 .registrar {
-    display: e;
-    background: #fff0f0;
-    width: 50%;
+    width: 49%;
 }
 
 .registrar-titulo {
-    display: e;
-    background: #e8fff5;
     margin: 0px;
     font-size: 30px;
 }
 
 .registrar-instruccion {
-    display: e;
-    background: #fff8d9;
     font-weight: lighter;
 }
 
-.inputs {
-    display: e;
-    background: #f0f7ff;
+.titulo-inputs {
+    margin-bottom: 8px;
+    display: flex;
 }
 
-.errorBorde {
-    display: e;
-    background: #ffecec;
+.formatoError {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 5px;
+}
+
+.inputs {
+    width: -webkit-fill-available;
 }
 
 .formularioBoton {
-    display: e;
-    background: #e6fff8;
+    width: -webkit-fill-available;
+    margin: 0px 0px 10px 0px;
+
 }
 
-.links {
-    display: e;
-    background: #fcefff;
+.texto-iniciarsesion {
+    display: flex;
+    justify-content: center;
 }
 
 .seccion2 {
-    display: e;
-    background: #eefaff;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
 }
 
+
+
 .seccion2-titulo {
-    display: e;
-    background: #e6ffe6;
+    margin: 0px;
+    font-size: xxx-large;
 }
 
 .seccion2-texto {
-    display: e;
-    background: #fff4e6;
+    font-size: large;
+}
+
+
+
+.seccion2-der-img {
+    width: 300px;
+    margin: 35px;
 }
 
 .seccion3 {
-    display: e;
-    background: #faf0ff;
+    padding: 15px;
 }
 
 .seccion3-titulo {
-    display: e;
-    background: #e1ffe1;
+    font-size: -webkit-xxx-large;
+    color: #0000007d;
 }
 
 .pregunta {
-    display: e;
-    background: #fff7e6;
+    color: #00000091;
+    margin: 0px 0px 10px 0px;
+    font-size: 27px;
 }
 
 .respuesta {
-    display: e;
-    background: #f2f9ff;
+    margin: 0px 0px 30px 0px;
+    font-size: 20px;
 }

@@ -23,28 +23,36 @@ export class MensajeErrorService {
     }
   }
 
-  registrarApellido(required: boolean, pattern1: boolean): string {
-    if (required) {
+  registrarApellido(apellido: AbstractControl | null): string {
+    if (!apellido) return '';
+
+    if (apellido.hasError('required')) {
       return 'Campo necesario.';
     }
-    else if (pattern1) {
-      return 'solo se permiten letras.';
+    else if (apellido.hasError('pattern')) {
+      return 'Solo se permiten letras.';
     }
-    else {
+    else if (apellido.hasError('minlength')) {
+      return 'Debe tener mas de 3 letras.';
+    } else {
       return '';
     }
   }
 
-  registrarCorreo(required: boolean, email: boolean, /*existe: boolean*/) {
-    if (required) {
+  registrarCorreo(correo: AbstractControl | null): string {
+    if (!correo) return '';
+
+    if (correo.hasError('required')) {
       return 'Campo necesario.';
     }
-    else if (email) {
-      return 'Correo invalido.'
+    else if (correo.hasError('email')) {
+      return 'Correo invalido.';
     }
-    else {
-      return '';
-    }
+    // else if (existe){            si esta o no disponible el correo
+    //   return 'Alguien ya registro ese correo.';
+    // }
+
+    return '';
   }
 
   registrarNickname(required: boolean, minlength: boolean) {
@@ -59,12 +67,14 @@ export class MensajeErrorService {
     }
   }
 
-  registrarContrasena(required: boolean, minlength: boolean) {
-    if (required) {
+  registrarContrasena(contrasena: AbstractControl | null): string {
+    if (!contrasena) return '';
+
+    if (contrasena.hasError('required')) {
       return 'Campo necesario.';
     }
-    else if (minlength) {
-      return 'Debe tener mas de 8 caracteres';
+    else if (contrasena.hasError('minlength')) {
+      return 'Debe tener mas de 8 caracteres.';
     }
     else {
       return '';
