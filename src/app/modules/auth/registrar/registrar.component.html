@@ -14,51 +14,64 @@
             Introduce tu informacion para configurar tu nueva cuenta.
         </p>
 
-        <label for="inputNombre">Nombre</label>
+        <label for="inputNombre" class="titulo-inputs">Nombre <span class="formatoError">{{errorNombre}}</span></label>
         <input type="text" id="inputNombre" formControlName="nombre" [ngClass]="{'errorBorde':errorNombre}"
             placeholder="Ingrese su nombre" class="inputs">
 
-        <label for="inputApellidoP">Apellido paterno</label>
+        <label for="inputApellidoP" class="titulo-inputs">Apellido paterno <span
+                class="formatoError">{{errorApellidoP}}</span></label>
         <input type="text" id="inputApellidoP" formControlName="apellidoP" [ngClass]="{'errorBorde':errorApellidoP}"
             placeholder="Ingrese su apellido paterno" class="inputs">
 
-        <label for="inputApellidoM">Apellido materno</label>
+        <label for="inputApellidoM" class="titulo-inputs">Apellido materno <span
+                class="formatoError">{{errorApellidoM}}</span></label>
         <input type="text" id="inputApellidoM" formControlName="apellidoM" [ngClass]="{'errorBorde':errorApellidoM}"
             placeholder="Ingrese su apellido materno" class="inputs">
 
-        <label for="inputCorreo">Correo electronico</label>
-        <input type="text" id="inputConrreo" formControlName="correo" [ngClass]="{'errorBorde':errorCorreo}"
+        <label for="inputCorreo" class="titulo-inputs">Correo electronico <span
+                class="formatoError">{{errorCorreo}}</span></label>
+        <input type="email" id="inputConrreo" formControlName="correo" [ngClass]="{'errorBorde':errorCorreo}"
             placeholder="Ingrese su correo electronico" class="inputs">
 
-        <label for="contraseña">Contraseña</label>
+        <label for="contraseña" class="titulo-inputs">Contraseña <span
+                class="formatoError">{{errorContrasena}}</span></label>
         <input type="password" id="inputContrasena" formControlName="contrasena"
             [ngClass]="{'errorBorde':errorContrasena}" placeholder="Ingrese su contraseña" class="inputs">
 
-        <label for="Rcontraseña">Contraseña</label>
-        <input type="password" id="inputRContrasena" [ngClass]="{'errorBorde':errorRContrasena}"
-            placeholder="Vuelva a ingresar su contraseña" class="inputs">
-
-        <button type="submit" class="formularioBoton">Crear Cuenta</button>
-        <p>
-            ¿Ya tienes una cuenta? <a routerLink="/" class="links">Inicia Sesión</a>
+        <button type="submit" class="boton1 formularioBoton">Crear Cuenta</button>
+        <p class="texto-iniciarsesion">¿Ya tienes una cuenta? <a routerLink="/" class="links space">Inicia Sesión</a>
         </p>
     </form>
 </div>
 
 <div class="seccion2">
-    <h2 class="seccion2-titulo">¿Qué es Dianet?</h2>
-    <p class="seccion2-texto">Dianet es una herramienta informativa que calcula tu riesgo estimado de desarrollar
-        diabetes basándose en tus
-        datos generales, historial familiar y hábitos de vida.</p>
+    <div class="seccion2-izq">
+        <h2 class="seccion2-titulo">¿Qué es Dianet?</h2>
+        <p class="seccion2-texto">Dianet es una herramienta informativa que ayuda a los usuarios a estimar su nivel de
+            probabilidad de desarrollar
+            diabetes basándose en datos generales, historial familiar y hábitos de vida. Nuestro objetivo es brindarte
+            una guía
+            sencilla y accesible para que comprendas mejor tus posibles factores de riesgo y puedas tomar decisiones más
+            conscientes sobre tu salud.
+        </p>
+    </div>
+    <div class="seccion2-der">
+        <img src="logo.png" alt="error" class="seccion2-der-img">
+    </div>
+
 </div>
 <div class="seccion3">
     <h2 class="seccion3-titulo">Preguntas frecuentes</h2>
     <h3 class="pregunta">¿Dianet hace diagnósticos médicos?</h3>
-    <p class="respuesta">No. Ofrecemos solo una estimación informativa.</p>
+    <p class="respuesta">No. Ofrecemos solo una estimación informativa, ante cualquier molestia o malestar recomendamos
+        plenamente ir con su medico de confianza.</p>
     <h3 class="pregunta">¿Qué tan preciso es?</h3>
-    <p class="respuesta">Es una guía basada en factores de riesgo generales, no una prueba médica.</p>
+    <p class="respuesta">Contamos con una IA entrenada con datos de la mejor calidad, sin enbargo esto no significa que
+        podamos remplazar la opinion de un medico.</p>
     <h3 class="pregunta">¿Mis datos se guardan?</h3>
-    <p class="respuesta">Puedes aclarar según tu sistema (idealmente, “no se almacenan”).</p>
+    <p class="respuesta">Si, esto con la intencion de llevar un progreso personal que usted como usuario pueda ver y le
+        sirva como seguimiento.</p>
     <h3 class="pregunta">¿Es gratis?</h3>
-    <p class="respuesta">Puedes indicar que sí, o depende de tu proyecto.</p>
+    <p class="respuesta">Si, dianet es totalmente gratis. Buscamos ofrecer mas oportunidades de salud a nuestros
+        usuarios de forma gratuita y libre acceso.</p>
 </div>

@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-consulta-page',
   templateUrl: './consulta-page.component.html',
   styleUrls: ['./consulta-page.component.css'],
-  imports: [FormsModule]
+  imports: [FormsModulezz]
 })
 export class ConsultaPageComponent {
 
