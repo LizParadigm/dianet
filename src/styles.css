@@ -27,7 +27,7 @@ body {
     font-family: var(--font-family-3);
 }
 
-/*fuente*/
+/* los titulos y el subtitulo al final no los use creo */
 .titulo {
     font-weight: 600;
 }
@@ -36,30 +36,52 @@ body {
     font-weight: 600;
 }
 
+/* formato para mensajes de error */
 .formatoError {
     color: var(--color-comun-6);
     font-size: x-small;
 }
 
+/* formato para estados de error en inputs cuando ocurran mensajes de error den los mismos */
 .bordeError {
     border: 1px solid var(--color-comun-6);
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
+/* limpia los botones, a veces lo uso a veces no */
 .limpiarButton {
-    isplay: flex;
     background: none;
     border: none;
     margin: 0px;
     padding: 0px;
 }
 
+/* se usa para limpiar los estilos de los links y sus efectos visuales */
 .links {
     text-decoration: none;
     color: #1a1a1a;
     transition: color 0.2s ease;
 }
 
+/* el efecto visual al pasar cursor sobre el link */
 .links:hover {
     color: var(--color-comun-2);
+}
+
+/* estilo para botones y su efectos cuando pasa cursor */
+.contenedor-form-boton1 {
+    border-radius: 2.5px;
+    border-width: inherit;
+    box-shadow: 0px 0px 1px #1a1a1a;
+    padding: 12px;
+    background: var(--color-comun-2);
+    color: white;
+    font-size: large;
+    transition: color 0.2s ease;
+    margin-top: 20px;
+}
+
+/* efecto visual */
+.contenedor-form-boton1:hover {
+    background: var(--color-comun-1)
 }

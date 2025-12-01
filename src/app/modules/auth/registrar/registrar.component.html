@@ -1,11 +1,12 @@
 <app-header></app-header>
+
 <div class="contenedor-registrar">
     <div class="seccion1">
         <h1 class="seccion1-titulo">BIENVENIDO a DIANET: Tu Salud, Nuestra Prioridad</h1>
         <p class="seccion1-texto">Regístrate ahora para acceder a herramientas avanzadas de gestión de salud y un
             seguimiento personalizado para tu bienestar.</p>
         <img src="registrar1.png" alt="error" class="seccion1-img">
-        <p class="seccion1-img-pie">"Cuidamos de ti, cada paso del camino."</p>
+        <i class="seccion1-img-pie">"Cuidamos de ti, cada paso del camino."</i>
     </div>
     <form [formGroup]="formulario" (ngSubmit)="registrar()" class="registrar">
         <h2 class="registrar-titulo">Crear una Cuenta en DIANET</h2>
@@ -42,4 +43,22 @@
             ¿Ya tienes una cuenta? <a routerLink="/" class="links">Inicia Sesión</a>
         </p>
     </form>
+</div>
+
+<div class="seccion2">
+    <h2 class="seccion2-titulo">¿Qué es Dianet?</h2>
+    <p class="seccion2-texto">Dianet es una herramienta informativa que calcula tu riesgo estimado de desarrollar
+        diabetes basándose en tus
+        datos generales, historial familiar y hábitos de vida.</p>
+</div>
+<div class="seccion3">
+    <h2 class="seccion3-titulo">Preguntas frecuentes</h2>
+    <h3 class="pregunta">¿Dianet hace diagnósticos médicos?</h3>
+    <p class="respuesta">No. Ofrecemos solo una estimación informativa.</p>
+    <h3 class="pregunta">¿Qué tan preciso es?</h3>
+    <p class="respuesta">Es una guía basada en factores de riesgo generales, no una prueba médica.</p>
+    <h3 class="pregunta">¿Mis datos se guardan?</h3>
+    <p class="respuesta">Puedes aclarar según tu sistema (idealmente, “no se almacenan”).</p>
+    <h3 class="pregunta">¿Es gratis?</h3>
+    <p class="respuesta">Puedes indicar que sí, o depende de tu proyecto.</p>
 </div>
