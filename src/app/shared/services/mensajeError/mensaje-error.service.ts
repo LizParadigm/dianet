@@ -19,7 +19,6 @@ export class MensajeErrorService {
   registrarNombre(nombre: AbstractControl | null): string {
     if (!nombre) return '';
 
-
     if (nombre.hasError('required')) {
       return 'Campo necesario.';
     }
@@ -316,4 +315,48 @@ export class MensajeErrorService {
       return '';
     }
   }
+
+  // datos generales
+  generalEdad(edad: AbstractControl | null): string {
+    if (!edad) return '';
+
+    if (edad.hasError('required')) {
+      return 'Campo necesario.';
+    }
+    else {
+      return '';
+    }
+  }
+
+  generalSexo(sexo: AbstractControl | null): string {
+    if (!sexo) return '';
+
+    if (sexo.hasError('required')) {
+      return 'Campo necesario.';
+    }
+    else {
+      return '';
+    }
+  }
+  generalpeso(peso: AbstractControl | null): string {
+    if (!peso) return '';
+
+    if (peso.hasError('required')) {
+      return 'Campo necesario.';
+    }
+    else {
+      return '';
+    }
+  }
+  generalEstatura(estatura: AbstractControl | null): string {
+    if (!estatura) return '';
+
+    if (estatura.hasError('required')) {
+      return 'Campo necesario.';
+    }
+    else {
+      return '';
+    }
+  }
+
 }

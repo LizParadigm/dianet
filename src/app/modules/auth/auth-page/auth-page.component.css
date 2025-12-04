@@ -7,11 +7,11 @@
 
 .contenedor {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     height: fit-content;
     width: fit-content;
-    border-radius: 5px;
-    box-shadow: 0px 0px 1px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 1px; */
     justify-content: center;
 }
 
@@ -21,6 +21,9 @@
     align-items: center;
     box-shadow: 0px 0px 1px;
     border-radius: 5px;
+    justify-content: space-around;
+    height: min-content;
+    padding: 5px 0px 35px;
 }
 
 .contenedor-form {
@@ -50,23 +53,7 @@
     flex-direction: column;
 }
 
-
-.contenedor-form-input {
-    border-radius: 2.5px;
-    border-width: inherit;
-    box-shadow: 0px 0px 1px #1a1a1a;
-    padding: 12px;
-    margin-bottom: 20px;
-    transition: color 0.2s ease;
-}
-
-
-.contenedor-form-input:hover {
-    background: #fafafa;
-    box-shadow: 0px 0px 2px #1a1a1a;
-}
-
-/* contenedor general */
+/* cOntenedor general */
 .contenedor-form-checkbox {
     display: inline-flex;
     align-items: center;

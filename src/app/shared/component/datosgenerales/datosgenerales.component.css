@@ -1,0 +1,42 @@
+/* Fondo oscuro */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Caja del modal */
+.modal {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #333;
+}

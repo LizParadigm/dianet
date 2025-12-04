@@ -16,5 +16,65 @@
         "fechaConsulta": "2025-11-05",
         "probabilidadDesarrollo": 73,
         "resumen": "El riesgo es elevado. Se recomienda incorporar ejercicio regular, limitar carbohidratos simples y mejorar la calidad del descanso para estabilizar tus niveles de glucosa."
+    },
+    {
+        "id": 4,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 72,
+        "resumen": "Se detecta un riesgo elevado con ligera tendencia a reducción. Mantener constancia en ejercicio moderado y limitar azúcares ayudará a mejorar los resultados."
+    },
+    {
+        "id": 5,
+        "fechaConsulta": "2025-11-20",
+        "probabilidadDesarrollo": 55,
+        "resumen": "El riesgo moderado permanece estable. Intenta aumentar el consumo de fibra y mantener horarios regulares en tus comidas."
+    },
+    {
+        "id": 6,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 75,
+        "resumen": "Se registra un riesgo alto. Es recomendable monitorear tu alimentación y mantener una rutina mínima de actividad física diaria."
+    },
+    {
+        "id": 7,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 74,
+        "resumen": "Persisten indicadores de riesgo elevado. Mejorar la hidratación, evitar bebidas azucaradas y aumentar el descanso nocturno puede ayudarte."
+    },
+    {
+        "id": 8,
+        "fechaConsulta": "2025-11-20",
+        "probabilidadDesarrollo": 58,
+        "resumen": "Riesgo moderado ligeramente ascendente. Considera reducir frituras y aumentar actividad física tres veces por semana."
+    },
+    {
+        "id": 9,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 71,
+        "resumen": "Los valores marcan riesgo alto, pero estable. Mantén una dieta baja en carbohidratos simples y realiza chequeos frecuentes."
+    },
+    {
+        "id": 10,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 76,
+        "resumen": "El riesgo continúa siendo elevado. Reforzar rutinas de ejercicio y controlar porciones en las comidas podría ayudar a disminuirlo."
+    },
+    {
+        "id": 11,
+        "fechaConsulta": "2025-11-20",
+        "probabilidadDesarrollo": 56,
+        "resumen": "Riesgo moderado. Se recomienda incrementar la ingesta de vegetales verdes y evitar periodos prolongados de sedentarismo."
+    },
+    {
+        "id": 12,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 72,
+        "resumen": "El riesgo es elevado y requiere atención. Evitar alimentos con alto índice glucémico puede mejorar tus valores en las próximas semanas."
+    },
+    {
+        "id": 13,
+        "fechaConsulta": "2025-11-05",
+        "probabilidadDesarrollo": 74,
+        "resumen": "Indicadores altos de riesgo. Se sugiere combinar actividad aeróbica ligera con estiramientos para mejorar tu estabilidad metabólica."
     }
 ]

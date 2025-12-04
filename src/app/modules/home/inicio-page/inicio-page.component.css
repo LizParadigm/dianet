@@ -1,65 +1,28 @@
-.contenedor {
+.contenedor1 {
     display: flex;
-    margin: 10px;
+    margin: 10px 10px 0px;
 }
 
 .grafica {
     display: flex;
     gap: 25px;
     padding: 20px;
-    height: 260px;
+    height: 300px;
     border: 1px solid #ddd;
     width: 70%;
 }
 
-.barras {
-    display: #123112;
-    background: #4a90e2;
-}
-
-.barra {
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.valor {
-    width: 100%;
-    background: #4a90e2;
-    border-radius: 6px 6px 0 0;
-    position: relative;
-    transition: height 0.4s ease;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: #fff;
-    font-weight: bold;
-}
-
-.pct {
-    position: absolute;
-    bottom: 100%;
-    margin-bottom: 5px;
-    font-size: 13px;
-    color: #333;
-}
-
-.fecha {
-    margin-top: 8px;
-    font-size: 13px;
-    color: #333;
-    text-align: center;
-    width: 100%;
-    white-space: nowrap;
-}
-
-.boton-consulta {
+.descripcion {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
     width: 30%;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.descripcion-titulo {
+    margin: 0px;
 }
 
 .boton1 {
@@ -68,17 +31,20 @@
     border-radius: 43px;
 }
 
+
 .resumen {
-    display: s;
-    background: #4674;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0px 10px;
+    transition: all 1s ease;
 }
 
 .resumen-titulo {
-    display: e;
-    background: #129211;
+    display: flex;
+    justify-content: space-between;
 }
 
-.resumen-parrafo {
-    display: s;
-    background: #1292;
+.fondo1 {
+    background: #f5f5f5;
 }

@@ -21,7 +21,7 @@ export class RutService {
       case '/home':
       case '/home/historial':
       case '/home/consulta':
-      case '/home/resultado':
+      case '/home/resultados':
         version = 1;
         break;
       case '/registrar':
@@ -36,6 +36,12 @@ export class RutService {
 
   consulta() {
     this.router.navigateByUrl('/home/consulta');
+  }
+  salir() {
+    this.router.navigateByUrl('/')
+  }
+  resultado() {
+    this.router.navigateByUrl('/home/resultados');
   }
 
 }

@@ -1,20 +1,26 @@
-<div class="contenedor">
-    <div class="grafica">
-        <div class="barras" *ngFor="let item of datos">
-            <div class="barra">
-                <div class="valor" [style.height.%]="item.probabilidadDesarrollo">
-                    <span class="pct">{{ item.probabilidadDesarrollo }}%</span>
-                </div>
-                <span class="fecha">{{ item.fechaConsulta }}</span>
-            </div>
+<div class="contenedor1 fondo1">
 
-        </div>
+    <div class="grafica">
+        <canvas id="myBarChart"></canvas>
     </div>
-    <div class="boton-consulta">
+
+    <div class="descripcion">
+        <h1 class="descripcion-titulo">Conoce tu progreso</h1>
+        <p class="descripcion-texto">Gracias a nuestra grafica, puedes llevar un registro visual que te ayude a
+            identificar si haz mejorado o
+            empeorado a lo largo de las consultas, la grafica te muestra el resultado de probabilidad de las consultas
+            que hayas realizado, dando click a una de las barras podras ver un resumen de dicha consulta.</p>
+        <p class="descripcion-texto">¡o puedes realizar una nueva consulta con el siguiente boton!</p>
         <button type="button" class="boton1" (click)="iniciarConsulta()">Realizar una nueva consulta</button>
     </div>
-    <div class="resumen" *ngIf="target">
-        <label class="resumen-titulo">Resumen <span>{{ target.fechaConsulta }}</span></label>
-        <p class="resumen-parrafo">{{ target.resumen }}</p>
-    </div>
+
 </div>
+
+<div class="resumen fondo1" *ngIf="target" @resumenAnim>
+    <label class="resumen-titulo">
+        Resumen <span>{{ target.fechaConsulta }}</span>
+    </label>
+    <p class="resumen-parrafo">{{ target.resumen }}</p>
+</div>
+
+<div #modalContainer></div>

@@ -7,7 +7,7 @@
         <a routerLink="{{inicio}}" class="links">Inicio</a>
         <a routerLink="/historial" class="links" *ngIf="version">Historial de consultas</a>
         <a routerLink="/" class="links" *ngIf="!version">Iniciar sesion</a>
-        <li class="header-links-perfil">
+        <li class="header-links-perfil" (click)="iniciarSesion()">
             <img src="" alt="X" class="img-perfil">
         </li>
     </ul>

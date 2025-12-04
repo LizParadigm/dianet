@@ -1,0 +1,29 @@
+<div class="overlay">
+    <form [formGroup]="formulario" (ngSubmit)="guardar()" class="modal">
+
+        <h2>Datos Generales</h2>
+        <p class="subtitle">Introduzca los datos generales. Recuerde mantener actualizados estos datos.</p>
+
+        <label>Edad <span class="formatoError">{{errorEdad}}</span></label>
+        <input type="number" class="inputs" placeholder="Tu edad" formControlName="edad"
+            [ngClass]="{'errorBorde': errorEdad}" />
+
+        <label>Sexo <span class="formatoError">{{errorSexo}}</span></label>
+        <select class="inputs" formControlName="sexo">
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+
+        <label>Peso <span class="formatoError">{{errorPeso}}</span></label>
+        <input type="number" class="inputs" placeholder="Peso kg" formControlName="peso"
+            [ngClass]="{'errorBorde': errorPeso}" />
+
+        <label>Estatura <span class="formatoError">{{errorEstatura}}</span></label>
+        <input type="number" class="inputs" placeholder="Estatura m" formControlName="estatura"
+            [ngClass]="{'errorBorde': errorEstatura}" />
+
+        <button class="submit" class="boton1">Guardar</button>
+
+    </form>
+</div>

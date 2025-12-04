@@ -22,6 +22,7 @@ export class RegistrarComponent implements OnInit {
   errorCorreo: String = '';
   errorContrasena: String = '';
   formulario!: FormGroup;
+
   constructor(
     private fb: FormBuilder,
     private errores: MensajeErrorService,

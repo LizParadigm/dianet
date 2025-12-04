@@ -94,10 +94,94 @@
 }
 
 .seccion3 {
-    padding: 15px;
+    background: #e6f8ff;
+    margin: 30px 0px;
+    box-shadow: 0px 0px 20px 1px;
+    padding: 0px 0px 1px;
 }
 
 .seccion3-titulo {
+    display: flex;
+    /* naranja pastel muy suave */
+    flex-direction: column;
+    align-items: center;
+    font-size: xxx-large;
+    margin: 0px;
+}
+
+.seccion3-lista {
+    display: flex;
+    background: #f1fbff;
+    list-style: none;
+    padding: 10px 0px;
+    box-shadow: inset 0px 0px 6px 0px;
+    justify-content: space-around;
+}
+
+.etiqueta {
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 0px 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.etiqueta-img {
+    display: e;
+    background: none;
+    width: 200px;
+    height: 200px;
+    margin: 0px 0px 10px;
+    background: none;
+}
+
+.etiqueta-titulo {
+    display: e;
+    /* verde agua muy tenue */
+    margin: 0px;
+}
+
+.etiqueta-texto {
+    display: e;
+    /* durazno ultra claro */
+}
+
+.seccion4 {
+    display: flex;
+    background: #e6f8ff;
+    justify-content: center;
+}
+
+.seccion4-izq {
+    display: e;
+}
+
+.seccion4-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.seccion4-titulo {
+    background: #fffce8;
+    font-size: -webkit-xxx-large;
+    margin: 0px;
+}
+
+.estilo1 {
+    display: a;
+}
+
+
+.preguntas {
+    padding: 15px;
+}
+
+.preguntas-titulo {
     font-size: -webkit-xxx-large;
     color: #0000007d;
 }

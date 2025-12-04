@@ -48,4 +48,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  iniciarSesion() {
+    this.rut.salir();
+  }
 }
